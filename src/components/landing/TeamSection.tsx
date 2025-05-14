@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
     role: 'CTO & Lead Developer',
     imageUrl: 'https://placehold.co/300x300.png',
     bio: 'Arquiteto de soluções robustas e escaláveis, apaixonado por tecnologia No-Code e desenvolvimento ágil.',
-    socials: { linkedin: '#', github: '#' },
+    socials: { linkedin: '#', github: 'https://github.com/Herbert-C-byte' },
     dataAiHint: 'man portrait tech'
   },
   {
