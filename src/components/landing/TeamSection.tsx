@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
     dataAiHint: 'woman portrait professional'
   },
   {
-    name: 'Carlos Pereira',
+    name: 'Cássio Herbert',
     role: 'CTO & Lead Developer',
     imageUrl: 'https://placehold.co/300x300.png',
     bio: 'Arquiteto de soluções robustas e escaláveis, apaixonado por tecnologia No-Code e desenvolvimento ágil.',
@@ -82,17 +82,17 @@ export function TeamSection() {
                   <div className="flex justify-center space-x-3">
                     {member.socials.linkedin && (
                       <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <Linkedin size={20} />
+                        <Linkedin size={22} />
                       </a>
                     )}
                     {member.socials.github && (
                       <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <Github size={20} />
+                        <Github size={22} />
                       </a>
                     )}
                     {member.socials.twitter && (
                       <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <Twitter size={20} />
+                        <Twitter size={22} />
                       </a>
                     )}
                   </div>
