@@ -17,7 +17,7 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Ana Silva',
+    name: 'Samuel Trump',
     role: 'CEO & AI Specialist',
     imageUrl: 'https://placehold.co/300x300.png',
     bio: 'Lidera a visão da Mentes Brilhantes, especialista em aplicar IA para resolver desafios complexos de negócios.',
