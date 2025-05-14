@@ -13,10 +13,14 @@ export function Footer() {
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com'}
   ];
 
-  const footerNavs = [
-      { label: "Sobre Nós", href: "/#home"}, // Assuming home has some about info or placeholder
+  const mainNavs = [
+      { label: "Home", href: "/#home"},
+      { label: "Sobre Nós", href: "/#about"},
       { label: "Serviços", href: "/#services"},
       { label: "Equipe", href: "/#team"},
+  ];
+
+  const legalNavs = [
       { label: "Política de Privacidade", href: "#"}, // Placeholder
       { label: "Termos de Uso", href: "#"} // Placeholder
   ];
@@ -35,7 +39,7 @@ export function Footer() {
           <div>
             <h5 className="font-semibold text-foreground mb-4 text-lg">Navegação</h5>
             <ul className="space-y-2">
-              {footerNavs.slice(0,3).map(nav => (
+              {mainNavs.map(nav => (
                 <li key={nav.label}>
                   <Link href={nav.href} className="text-sm hover:text-primary transition-colors">
                     {nav.label}
@@ -48,7 +52,7 @@ export function Footer() {
           <div>
              <h5 className="font-semibold text-foreground mb-4 text-lg">Legal</h5>
             <ul className="space-y-2">
-               {footerNavs.slice(3).map(nav => (
+               {legalNavs.map(nav => (
                 <li key={nav.label}>
                   <Link href={nav.href} className="text-sm hover:text-primary transition-colors">
                     {nav.label}
