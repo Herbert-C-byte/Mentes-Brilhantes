@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Cpu, BrainCog, CodeXml, Zap, Briefcase, DollarSign, Users, Clock } from 'lucide-react';
+import { Cpu, BrainCog, CodeXml, Zap } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface ServiceOption {
   name: string;
@@ -11,8 +12,10 @@ interface Service {
   icon: LucideIcon;
   title: string;
   description: string;
-  details?: string[]; // Kept for general details
-  options?: ServiceOption[]; // New field for specific options with prices
+  imageUrl: string;
+  dataAiHint: string;
+  details?: string[];
+  options?: ServiceOption[];
 }
 
 const services: Service[] = [
@@ -20,6 +23,8 @@ const services: Service[] = [
     icon: Cpu,
     title: 'Consultoria TI Estratégica',
     description: 'Alinhamos sua TI aos seus objetivos de negócio com planos robustos.',
+    imageUrl: 'https://placehold.co/400x225.png',
+    dataAiHint: 'strategy plan',
     options: [
       { name: 'Diagnóstico Inicial + Plano Estratégico (Pequena Empresa)', price: 'AOA 150.000,00' },
       { name: 'Consultoria Mensal (Retainer)', price: 'A partir de AOA 80.000,00/mês' },
@@ -31,6 +36,8 @@ const services: Service[] = [
     icon: BrainCog,
     title: 'Soluções com Inteligência Artificial',
     description: 'Implementamos IA para otimizar processos e gerar insights valiosos.',
+    imageUrl: 'https://placehold.co/400x225.png',
+    dataAiHint: 'ai brain',
      options: [
       { name: 'Chatbot Básico para Atendimento', price: 'AOA 95.000,00 (Setup)' },
       { name: 'Análise de Dados com IA (Projeto Piloto)', price: 'AOA 200.000,00' },
@@ -42,6 +49,8 @@ const services: Service[] = [
     icon: CodeXml,
     title: 'Desenvolvimento Web Sob Medida',
     description: 'Criamos plataformas web performáticas, responsivas e focadas em UX.',
+    imageUrl: 'https://placehold.co/400x225.png',
+    dataAiHint: 'web design',
     options: [
       { name: 'Website Institucional Moderno (até 5 páginas)', price: 'AOA 180.000,00' },
       { name: 'Landing Page de Alta Conversão', price: 'AOA 70.000,00' },
@@ -53,6 +62,8 @@ const services: Service[] = [
     icon: Zap,
     title: 'Projetos No-Code/Low-Code',
     description: 'Entregamos soluções digitais de forma ágil e econômica.',
+    imageUrl: 'https://placehold.co/400x225.png',
+    dataAiHint: 'visual builder',
     options: [
       { name: 'MVP (Produto Mínimo Viável) Interativo', price: 'AOA 250.000,00' },
       { name: 'Automação de Fluxos de Trabalho Internos', price: 'AOA 150.000,00' },
@@ -74,8 +85,19 @@ export function ServicesSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-              <CardHeader className="flex flex-row items-start gap-4 pb-4">
+            <Card key={service.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden rounded-lg">
+              {service.imageUrl && (
+                <div className="relative w-full aspect-[16/9]">
+                  <Image
+                    src={service.imageUrl}
+                    alt={`Ilustração para ${service.title}`}
+                    layout="fill"
+                    objectFit="cover"
+                    data-ai-hint={service.dataAiHint}
+                  />
+                </div>
+              )}
+              <CardHeader className="flex flex-row items-start gap-4 pb-4 pt-6">
                 <div className="bg-primary/10 p-3 rounded-lg shrink-0">
                    <service.icon className="h-8 w-8 text-primary" />
                 </div>
@@ -84,7 +106,7 @@ export function ServicesSection() {
                   <CardDescription className="text-muted-foreground mt-1 text-sm">{service.description}</CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between">
+              <CardContent className="flex-grow flex flex-col justify-between pt-0">
                 {service.options && service.options.length > 0 && (
                   <div className="mb-4">
                     <h4 className="font-medium text-foreground/90 mb-2 text-sm">Opções e Preços (Exemplos):</h4>
@@ -117,7 +139,7 @@ export function ServicesSection() {
         </div>
          <div className="text-center mt-12 md:mt-16">
             <p className="text-muted-foreground">
-                Valores são exemplificativos e podem variar conforme escopo do projeto. <a href="#contact" className="text-primary hover:underline">Entre em contato</a> para um orçamento personalizado.
+                Valores são exemplificativos e podem variar conforme escopo do projeto. <a href="/#contact" className="text-primary hover:underline">Entre em contato</a> para um orçamento personalizado.
             </p>
         </div>
       </div>
