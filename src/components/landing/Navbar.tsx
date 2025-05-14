@@ -13,7 +13,6 @@ const navItems = [
   { label: 'Home', href: '/#home' },
   { label: 'Serviços', href: '/#services' },
   { label: 'Equipe', href: '/#team' },
-  { label: 'Contato', href: '/#contact' },
 ];
 
 export function Navbar() {
@@ -48,9 +47,6 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/#contact">Fale Conosco</Link>
-          </Button>
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -81,11 +77,6 @@ export function Navbar() {
                     </Link>
                   </SheetClose>
                 ))}
-                <SheetClose asChild>
-                  <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                    <Link href="/#contact">Fale Conosco</Link>
-                  </Button>
-                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

@@ -17,7 +17,6 @@ export function Footer() {
       { label: "Sobre Nós", href: "/#home"}, // Assuming home has some about info or placeholder
       { label: "Serviços", href: "/#services"},
       { label: "Equipe", href: "/#team"},
-      { label: "Contato", href: "/#contact"},
       { label: "Política de Privacidade", href: "#"}, // Placeholder
       { label: "Termos de Uso", href: "#"} // Placeholder
   ];
@@ -36,7 +35,7 @@ export function Footer() {
           <div>
             <h5 className="font-semibold text-foreground mb-4 text-lg">Navegação</h5>
             <ul className="space-y-2">
-              {footerNavs.slice(0,4).map(nav => (
+              {footerNavs.slice(0,3).map(nav => (
                 <li key={nav.label}>
                   <Link href={nav.href} className="text-sm hover:text-primary transition-colors">
                     {nav.label}
@@ -49,7 +48,7 @@ export function Footer() {
           <div>
              <h5 className="font-semibold text-foreground mb-4 text-lg">Legal</h5>
             <ul className="space-y-2">
-               {footerNavs.slice(4).map(nav => (
+               {footerNavs.slice(3).map(nav => (
                 <li key={nav.label}>
                   <Link href={nav.href} className="text-sm hover:text-primary transition-colors">
                     {nav.label}
