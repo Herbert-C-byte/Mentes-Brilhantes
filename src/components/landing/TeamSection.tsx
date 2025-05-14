@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Linkedin, Github, Twitter } from 'lucide-react';
+import { Linkedin, Github, Twitter, Facebook, Instagram } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -11,6 +11,8 @@ interface TeamMember {
     linkedin?: string;
     github?: string;
     twitter?: string;
+    facebook?: string;
+    instagram?: string;
   };
   dataAiHint?: string;
 }
@@ -21,7 +23,7 @@ const teamMembers: TeamMember[] = [
     role: 'CEO & AI Specialist',
     imageUrl: 'https://placehold.co/300x300.png',
     bio: 'Lidera a visão da Mentes Brilhantes, especialista em aplicar IA para resolver desafios complexos de negócios.',
-    socials: { linkedin: '#', twitter: '#' },
+    socials: { facebook: 'https://facebook.com/samuel.trump.placeholder', instagram: '#' },
     dataAiHint: 'woman portrait professional'
   },
   {
@@ -37,7 +39,7 @@ const teamMembers: TeamMember[] = [
     role: 'Head of IT Solutions',
     imageUrl: 'https://placehold.co/300x300.png',
     bio: 'Especialista em infraestrutura de TI e segurança, garantindo que as operações dos clientes funcionem perfeitamente.',
-    socials: { linkedin: '#', twitter: '#' },
+    socials: { facebook: '#', instagram: '#' },
     dataAiHint: 'woman portrait corporate'
   },
    {
@@ -81,18 +83,28 @@ export function TeamSection() {
                 {member.socials && (
                   <div className="flex justify-center space-x-3">
                     {member.socials.linkedin && (
-                      <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                      <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                         <Linkedin size={22} />
                       </a>
                     )}
                     {member.socials.github && (
-                      <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                      <a href={member.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
                         <Github size={22} />
                       </a>
                     )}
                     {member.socials.twitter && (
-                      <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                      <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                         <Twitter size={22} />
+                      </a>
+                    )}
+                    {member.socials.facebook && (
+                      <a href={member.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+                        <Facebook size={22} />
+                      </a>
+                    )}
+                    {member.socials.instagram && (
+                      <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+                        <Instagram size={22} />
                       </a>
                     )}
                   </div>
