@@ -54,9 +54,9 @@ const services: Service[] = [
     title: 'Projetos No-Code/Low-Code',
     description: 'Entregamos soluções digitais de forma ágil e econômica.',
     options: [
-      { name: 'MVP (Produto Mínimo Viável) Interativo', price: 'AOA 120.000,00' },
-      { name: 'Automação de Fluxos de Trabalho Internos', price: 'AOA 65.000,00' },
-      { name: 'Criação de App Interno Simples', price: 'A partir de AOA 90.000,00' },
+      { name: 'MVP (Produto Mínimo Viável) Interativo', price: 'AOA 250.000,00' },
+      { name: 'Automação de Fluxos de Trabalho Internos', price: 'AOA 150.000,00' },
+      { name: 'Criação de App Interno Simples', price: 'A partir de AOA 180.000,00' },
     ],
     details: ['Rápida implementação', 'Redução de custos', 'Fácil manutenção']
   },
