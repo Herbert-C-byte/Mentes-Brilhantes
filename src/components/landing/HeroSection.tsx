@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Left Column: Text Content */}
           <div className="md:text-left text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-6">
-              <span className="block">Mentes Brilhantes</span>
+              <span className="block">Mentes Brilhantes PSCL</span>
               <span className="block text-primary">Inovação e Tecnologia ao Seu Alcance</span>
             </h1>
             <p className="mx-auto md:mx-0 max-w-2xl text-lg md:text-xl text-muted-foreground mb-10">
