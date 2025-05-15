@@ -80,7 +80,7 @@ export function Navbar() {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium text-foreground transition-colors relative group py-2.5 px-3", 
+                  "text-sm font-medium text-foreground relative group py-2.5 px-3", 
                   isActive
                     ? "text-primary font-semibold" // Active state color
                     : "hover:text-primary"        // Hover state color
