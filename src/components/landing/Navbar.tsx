@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -19,13 +20,30 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const [currentHash, setCurrentHash] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll(); // Call on mount to set initial state
+
+    // Set initial hash and listen for changes
+    if (typeof window !== "undefined") {
+      setCurrentHash(window.location.hash);
+    }
+    const handleHashChange = () => {
+      if (typeof window !== "undefined") {
+        setCurrentHash(window.location.hash);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   return (
@@ -35,19 +53,49 @@ export function Navbar() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Logo />
-        <nav className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium text-foreground/80 hover:text-primary transition-colors",
-                pathname === item.href || (item.href.includes("#") && pathname + (typeof window !== "undefined" ? window.location.hash : "") === item.href) ? "text-primary font-semibold" : ""
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center space-x-1">
+          {navItems.map((item) => {
+            // Determine if the link is active
+            // 1. Exact pathname match (for non-hash links)
+            // 2. Pathname and hash match (for hash links like /#about or /page#section)
+            let isActive = false;
+            if (!item.href.includes("#")) {
+              isActive = pathname === item.href;
+            } else {
+              // For href="/#section", targetPath should be "/"
+              // For href="/page#section", targetPath should be "/page"
+              const itemPathOnly = item.href.split("#")[0] || "/";
+              const itemHashOnly = "#" + item.href.split("#")[1];
+              isActive = pathname === itemPathOnly && currentHash === itemHashOnly;
+            }
+            
+            // Fallback for root page default section (e.g. /#home should be active on / if no hash)
+            if (item.href === "/#home" && pathname === "/" && currentHash === "") {
+              isActive = true;
+            }
+
+
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={cn(
+                  "text-sm font-medium text-foreground/80 transition-colors relative group py-2.5 px-3", // Added padding
+                  isActive
+                    ? "text-primary font-semibold" // Active state color
+                    : "hover:text-primary"        // Hover state color
+                )}
+              >
+                {item.label}
+                <span
+                  className={cn(
+                    "absolute bottom-1.5 left-1/2 transform -translate-x-1/2 h-[2px] bg-primary transition-all duration-300 ease-out",
+                    isActive ? "w-1/2" : "w-0 group-hover:w-1/2" // Underline width
+                  )}
+                />
+              </Link>
+            );
+          })}
         </nav>
         <div className="md:hidden">
           <Sheet>
