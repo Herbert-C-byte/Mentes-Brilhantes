@@ -41,7 +41,7 @@ export function HeroSection() {
               alt="Janela para o futuro tecnológico"
               layout="fill"
               objectFit="cover"
-              className="rounded-md"
+              className="rounded-lg"
             />
           </div>
         </div>
