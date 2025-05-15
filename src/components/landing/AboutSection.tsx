@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, BookOpen, Users, Lightbulb, ShieldCheck, Handshake } from 'lucide-react';
@@ -43,7 +44,7 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-foreground">Nossa História</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Fundada em 2018 por um grupo de entusiastas da tecnologia com a visão de simplificar o complexo, a Mentes Brilhantes nasceu do desejo de tornar a inovação acessível a todas as empresas em Angola. Começamos em um pequeno escritório, focados em consultoria de TI, e rapidamente expandimos nosso portfólio para incluir desenvolvimento web e as primeiras incursões em inteligência artificial.
+              A Mentes Brilhantes PSCL é uma organização angolana composta por jovens talentos e profissionais multidisciplinares, criada para desenvolver soluções inteligentes que conectem ideias, tecnologia e impacto social. Foi fundada oficialmente em 15 de Maio de 2016, na província de Cabinda, por três cofundadores: Pedro Samuel Conde Lubuku, João Maria Nvula e José da Conceição Ferreira.  Inicialmente conhecida como Mentes Pensantes, passou por uma reestruturação visual e conceitual até consolidar-se em 2025 como Mentes Brilhantes PSCL.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Ao longo dos anos, superamos desafios, celebramos marcos importantes e, o mais importante, construímos parcerias duradouras com nossos clientes, ajudando-os a navegar pela transformação digital. Cada projeto nos ensinou e fortaleceu nosso compromisso com a excelência e com o progresso tecnológico do nosso país.
