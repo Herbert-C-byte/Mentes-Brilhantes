@@ -37,12 +37,11 @@ export function HeroSection() {
           {/* Right Column: Image */}
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl mt-8 md:mt-0 p-6">
             <Image
-              src="https://placehold.co/600x450.png"
+              src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxicmFpbnN8ZW58MHx8fHwxNzQ3MjY4MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Janela para o futuro tecnológico"
               layout="fill"
               objectFit="cover"
               className="rounded-md"
-              data-ai-hint="futuristic window tech"
             />
           </div>
         </div>
