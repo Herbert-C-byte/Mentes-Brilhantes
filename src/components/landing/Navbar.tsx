@@ -80,7 +80,7 @@ export function Navbar() {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium text-foreground transition-colors relative group py-2.5 px-3", // Changed text-foreground/80 to text-foreground
+                  "text-sm font-medium text-foreground transition-colors relative group py-2.5 px-3", 
                   isActive
                     ? "text-primary font-semibold" // Active state color
                     : "hover:text-primary"        // Hover state color
@@ -110,7 +110,7 @@ export function Navbar() {
                 <div className="flex justify-between items-center">
                   <Logo />
                   <SheetClose asChild>
-                     <Button variant="ghost" size="icon">
+                     <Button variant="ghost" size="icon" className="text-primary">
                         <X className="h-6 w-6" />
                         <span className="sr-only">Fechar menu</span>
                       </Button>
