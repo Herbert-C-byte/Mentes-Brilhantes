@@ -7,11 +7,11 @@ export function HeroSection() {
     <section id="home" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-background to-background">
       <div className="absolute inset-0 opacity-5 overflow-hidden">
         {/* Decorative background pattern or image can go here */}
-         <Image 
-            src="https://placehold.co/1920x1080.png" 
-            alt="Abstract background" 
-            layout="fill" 
-            objectFit="cover" 
+         <Image
+            src="https://placehold.co/1920x1080.png"
+            alt="Abstract background"
+            layout="fill"
+            objectFit="cover"
             className="opacity-20"
             data-ai-hint="abstract tech"
           />
@@ -31,19 +31,17 @@ export function HeroSection() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-transform hover:scale-105">
                 <Link href="/#services">Nossos Serviços</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="shadow-lg transition-transform hover:scale-105 border-primary text-primary hover:bg-primary/10">
-                <Link href="/#contact">Entre em Contato</Link>
-              </Button>
             </div>
           </div>
 
           {/* Right Column: Image */}
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl mt-8 md:mt-0">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl mt-8 md:mt-0 p-6">
             <Image
               src="https://placehold.co/600x450.png"
               alt="Janela para o futuro tecnológico"
               layout="fill"
               objectFit="cover"
+              className="rounded-md"
               data-ai-hint="futuristic window tech"
             />
           </div>
