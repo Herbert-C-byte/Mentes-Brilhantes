@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Cpu, BrainCog, CodeXml, Zap } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 interface ServiceOption {
   name: string;
