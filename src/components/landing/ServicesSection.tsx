@@ -49,7 +49,7 @@ const services: Service[] = [
     icon: CodeXml,
     title: 'Desenvolvimento Web Sob Medida',
     description: 'Criamos plataformas web performáticas, responsivas e focadas em UX.',
-    imageUrl: 'https://placehold.co/400x225.png',
+    imageUrl: 'https://images.unsplash.com/photo-1590608897129-79da98d15969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWIlMjBkZXZ8ZW58MHx8fHwxNzQ3NTIyNTg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
     dataAiHint: 'web design',
     options: [
       { name: 'Website Institucional Moderno (até 5 páginas)', price: 'AOA 180.000,00' },
