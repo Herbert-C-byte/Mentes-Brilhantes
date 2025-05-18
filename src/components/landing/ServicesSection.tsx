@@ -23,7 +23,7 @@ const services: Service[] = [
     icon: Cpu,
     title: 'Consultoria TI Estratégica',
     description: 'Alinhamos sua TI aos seus objetivos de negócio com planos robustos.',
-    imageUrl: 'https://placehold.co/400x225.png',
+    imageUrl: '/consultoria-em-ti.jpg', // Changed to local public image
     dataAiHint: 'strategy plan',
     options: [
       { name: 'Diagnóstico Inicial + Plano Estratégico (Pequena Empresa)', price: 'AOA 150.000,00' },
@@ -62,7 +62,7 @@ const services: Service[] = [
     icon: Zap,
     title: 'Projetos No-Code/Low-Code',
     description: 'Entregamos soluções digitais de forma ágil e econômica.',
-    imageUrl: 'https://placehold.co/400x225.png',
+    imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWIlMjBkZXZ8ZW58MHx8fHwxNzQ3NTIyNTg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
     dataAiHint: 'visual builder',
     options: [
       { name: 'MVP (Produto Mínimo Viável) Interativo', price: 'AOA 250.000,00' },
