@@ -23,7 +23,7 @@ const services: Service[] = [
     icon: Cpu,
     title: 'Consultoria TI Estratégica',
     description: 'Alinhamos sua TI aos seus objetivos de negócio com planos robustos.',
-    imageUrl: '/consultoria-em-ti.jpg', // Changed to local public image
+    imageUrl: '/consultoria-em-ti.jpg',
     dataAiHint: 'strategy plan',
     options: [
       { name: 'Diagnóstico Inicial + Plano Estratégico (Pequena Empresa)', price: 'AOA 150.000,00' },
@@ -36,7 +36,7 @@ const services: Service[] = [
     icon: BrainCog,
     title: 'Soluções com Inteligência Artificial',
     description: 'Implementamos IA para otimizar processos e gerar insights valiosos.',
-    imageUrl: 'https://placehold.co/400x225.png',
+    imageUrl: 'https://images.unsplash.com/photo-1710993011836-108ba89ebe51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8QUklMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzQ3NTQ2NTA2fDA&ixlib=rb-4.1.0&q=80&w=1080',
     dataAiHint: 'ai brain',
      options: [
       { name: 'Chatbot Básico para Atendimento', price: 'AOA 95.000,00 (Setup)' },
