@@ -34,10 +34,10 @@ const teamMembers: TeamMember[] = [
     socials: { facebook: '#', instagram: '#' },
   },
    {
-    name: 'Ricardo Alves',
-    role: 'No-Code Evangelist & Solutions Architect',
-    bio: 'Promove e implementa soluções No-Code/Low-Code, ao mesmo tempo que projeta arquiteturas de software inovadoras, capacitando empresas a inovar mais rapidamente.',
-    socials: { linkedin: '#', github: '#' },
+    name: 'Edmilson José',
+    role: 'Secretary',
+    bio: 'Responsável pela organização administrativa e comunicação, assegurando o bom funcionamento das operações diárias da empresa.',
+    socials: {}, // Removed previous social links
   },
 ];
 
@@ -54,14 +54,14 @@ export function TeamSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center overflow-hidden">
-              {/* Image container removed */}
+              {/* Image container removed as per previous request */}
               <CardHeader className="pt-6">
                 <CardTitle className="text-xl font-semibold text-foreground">{member.name}</CardTitle>
                 <CardDescription className="text-primary">{member.role}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>
-                {member.socials && (
+                {member.socials && Object.keys(member.socials).length > 0 && (
                   <div className="flex justify-center space-x-3">
                     {member.socials.linkedin && (
                       <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
