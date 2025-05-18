@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Linkedin, Github, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 
 export function Footer() {
@@ -8,9 +8,6 @@ export function Footer() {
   const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
     { name: 'GitHub', icon: Github, href: 'https://github.com' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com'},
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com'}
   ];
 
   const mainNavs = [
@@ -66,7 +63,7 @@ export function Footer() {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">
-            &copy; {currentYear} Mentes Brilhantes. Todos os direitos reservados.
+            &copy; {currentYear} Cássio Herbert. Todos os direitos reservados.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((social) => (

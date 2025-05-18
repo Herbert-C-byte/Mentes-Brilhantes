@@ -12,6 +12,7 @@ export function HeroSection() {
             alt="Abstract background"
             layout="fill"
             objectFit="cover"
+            priority
             className="opacity-20"
             data-ai-hint="abstract tech"
           />

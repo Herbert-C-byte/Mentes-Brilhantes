@@ -33,7 +33,7 @@ export function AboutSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nossa Jornada: Paixão por Inovação e Resultados</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Descubra como a Mentes Brilhantes se tornou referência em soluções tecnológicas, impulsionando o futuro de negócios em Angola.
+            Descubra como a Mentes Brilhantes PSCL se tornou referência em soluções tecnológicas, impulsionando o futuro de negócios em Angola.
           </p>
         </div>
 
@@ -44,10 +44,10 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-foreground">Nossa História</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              A Mentes Brilhantes PSCL é uma organização angolana composta por jovens talentos e profissionais multidisciplinares, criada para desenvolver soluções inteligentes que conectem ideias, tecnologia e impacto social. Foi fundada oficialmente em 15 de Maio de 2016, na província de Cabinda, por três cofundadores: Pedro Samuel Conde Lubuku, João Maria Nvula e José da Conceição Ferreira.  Inicialmente conhecida como Mentes Pensantes, passou por uma reestruturação visual e conceitual até consolidar-se em 2025 como Mentes Brilhantes PSCL.
+              A Mentes Brilhantes PSCL é uma organização angolana composta por jovens talentos e profissionais multidisciplinares, criada para desenvolver soluções inteligentes que conectem ideias, tecnologia e impacto social.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Ao longo dos anos, superamos desafios, celebramos marcos importantes e, o mais importante, construímos parcerias duradouras com nossos clientes, ajudando-os a navegar pela transformação digital. Cada projeto nos ensinou e fortaleceu nosso compromisso com a excelência e com o progresso tecnológico do nosso país.
+            Foi fundada oficialmente em 15 de Maio de 2016, na província de Cabinda, por três cofundadores: Pedro Samuel Conde Lubuku, João Maria Nvula e José da Conceição Ferreira. Inicialmente conhecida como Mentes Pensantes, passou por uma reestruturação visual e conceitual até consolidar-se em 2025 como Mentes Brilhantes PSCL.
             </p>
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
@@ -68,6 +68,7 @@ export function AboutSection() {
               alt="Visão de futuro da Mentes Brilhantes"
               layout="fill"
               objectFit="cover"
+              priority
               data-ai-hint="global connection network"
             />
           </div>
