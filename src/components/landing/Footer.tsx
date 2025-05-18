@@ -7,7 +7,7 @@ export function Footer() {
 
   const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/Herbert-C-byte' },
   ];
 
   const mainNavs = [
@@ -26,7 +26,7 @@ export function Footer() {
     <footer className="bg-muted text-muted-foreground py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div>
+          <div className="flex flex-col items-start">
             <Logo className="mb-4" />
             <p className="text-sm max-w-xs">
               Mentes Brilhantes: Potencializando o futuro com soluções tecnológicas inovadoras e personalizadas.
