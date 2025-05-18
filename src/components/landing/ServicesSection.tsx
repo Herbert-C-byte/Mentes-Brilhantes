@@ -23,7 +23,7 @@ const services: Service[] = [
     icon: Cpu,
     title: 'Consultoria TI Estratégica',
     description: 'Alinhamos sua TI aos seus objetivos de negócio com planos robustos.',
-    imageUrl: '/consultoria-em-ti.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8YnVzaW5lc3MlMjByZXVuaW9ufGVufDB8fHx8MTc0NzU0NzE2NHww&ixlib=rb-4.1.0&q=80&w=1080',
     dataAiHint: 'strategy plan',
     options: [
       { name: 'Diagnóstico Inicial + Plano Estratégico (Pequena Empresa)', price: 'AOA 150.000,00' },
