@@ -1,13 +1,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Linkedin, Github, Facebook, Instagram } from 'lucide-react';
-// Removed Image import as it's no longer used
+import Image from "next/legacy/image";
 
 interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  // imageUrl is removed
+  imageUrl: string; // Re-added
+  dataAiHint: string; // Re-added
   socials?: {
     linkedin?: string;
     github?: string;
@@ -20,28 +21,32 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Samuel Trump',
     role: 'CEO & AI Specialist',
-    // imageUrl removed
+    imageUrl: 'https://placehold.co/300x300.png',
+    dataAiHint: 'man portrait ceo',
     bio: 'Lidera a visão da Mentes Brilhantes, especialista em aplicar IA para resolver desafios complexos de negócios.',
     socials: { facebook: 'https://facebook.com/samuel.trump.placeholder', instagram: '#' },
   },
   {
     name: 'Cássio Herbert',
     role: 'CTO & Lead Full-Stack Developer',
-    // imageUrl removed
+    imageUrl: 'https://placehold.co/300x300.png',
+    dataAiHint: 'man portrait developer',
     bio: 'Responsável técnico pelo projeto e desenvolvimento full-stack, transformando conceitos em soluções digitais robustas e escaláveis.',
     socials: { linkedin: '#', github: 'https://github.com/Herbert-C-byte' },
   },
   {
     name: 'Juliana Costa',
     role: 'Head of IT Solutions',
-    // imageUrl removed
+    imageUrl: 'https://placehold.co/300x300.png',
+    dataAiHint: 'woman portrait corporate',
     bio: 'Especialista em infraestrutura de TI e segurança, garantindo que as operações dos clientes funcionem perfeitamente.',
     socials: { facebook: '#', instagram: '#' },
   },
    {
     name: 'Ricardo Alves',
     role: 'No-Code Evangelist & Solutions Architect',
-    // imageUrl removed
+    imageUrl: 'https://placehold.co/300x300.png',
+    dataAiHint: 'man portrait architect',
     bio: 'Promove e implementa soluções No-Code/Low-Code, ao mesmo tempo que projeta arquiteturas de software inovadoras, capacitando empresas a inovar mais rapidamente.',
     socials: { linkedin: '#', github: '#' },
   },
@@ -60,7 +65,15 @@ export function TeamSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center overflow-hidden">
-              {/* Image rendering block removed */}
+              <div className="relative h-48 w-full bg-muted">
+                <Image
+                  src={member.imageUrl}
+                  alt={member.name}
+                  layout="fill"
+                  objectFit="cover"
+                  data-ai-hint={member.dataAiHint}
+                />
+              </div>
               <CardHeader className="pt-6">
                 <CardTitle className="text-xl font-semibold text-foreground">{member.name}</CardTitle>
                 <CardDescription className="text-primary">{member.role}</CardDescription>
