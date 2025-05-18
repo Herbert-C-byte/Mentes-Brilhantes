@@ -1,54 +1,49 @@
-import Image from "next/legacy/image";
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Linkedin, Github, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Linkedin, Github, Facebook, Instagram } from 'lucide-react';
+// Removed Image import as it's no longer used
 
 interface TeamMember {
   name: string;
   role: string;
-  imageUrl: string;
   bio: string;
+  // imageUrl is removed
   socials?: {
     linkedin?: string;
     github?: string;
-    twitter?: string;
     facebook?: string;
     instagram?: string;
   };
-  dataAiHint?: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
     name: 'Samuel Trump',
     role: 'CEO & AI Specialist',
-    imageUrl: 'https://placehold.co/300x300.png',
+    // imageUrl removed
     bio: 'Lidera a visão da Mentes Brilhantes, especialista em aplicar IA para resolver desafios complexos de negócios.',
     socials: { facebook: 'https://facebook.com/samuel.trump.placeholder', instagram: '#' },
-    dataAiHint: 'woman portrait professional'
   },
   {
     name: 'Cássio Herbert',
-    role: 'CTO & Lead Developer',
-    imageUrl: 'https://placehold.co/300x300.png',
-    bio: 'Arquiteto de soluções robustas e escaláveis, apaixonado por tecnologia No-Code e desenvolvimento ágil.',
+    role: 'CTO & Lead Full-Stack Developer',
+    // imageUrl removed
+    bio: 'Responsável técnico pelo projeto e desenvolvimento full-stack, transformando conceitos em soluções digitais robustas e escaláveis.',
     socials: { linkedin: '#', github: 'https://github.com/Herbert-C-byte' },
-    dataAiHint: 'man portrait tech'
   },
   {
     name: 'Juliana Costa',
     role: 'Head of IT Solutions',
-    imageUrl: 'https://placehold.co/300x300.png',
+    // imageUrl removed
     bio: 'Especialista em infraestrutura de TI e segurança, garantindo que as operações dos clientes funcionem perfeitamente.',
     socials: { facebook: '#', instagram: '#' },
-    dataAiHint: 'woman portrait corporate'
   },
    {
     name: 'Ricardo Alves',
-    role: 'No-Code Evangelist',
-    imageUrl: 'https://placehold.co/300x300.png',
-    bio: 'Promove e implementa soluções No-Code, capacitando empresas a inovar mais rapidamente.',
+    role: 'No-Code Evangelist & Solutions Architect',
+    // imageUrl removed
+    bio: 'Promove e implementa soluções No-Code/Low-Code, ao mesmo tempo que projeta arquiteturas de software inovadoras, capacitando empresas a inovar mais rapidamente.',
     socials: { linkedin: '#', github: '#' },
-    dataAiHint: 'man portrait friendly'
   },
 ];
 
@@ -65,15 +60,7 @@ export function TeamSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center overflow-hidden">
-              <div className="relative h-48 w-full bg-muted">
-                <Image
-                  src={member.imageUrl}
-                  alt={member.name}
-                  layout="fill"
-                  objectFit="cover"
-                  data-ai-hint={member.dataAiHint}
-                />
-              </div>
+              {/* Image rendering block removed */}
               <CardHeader className="pt-6">
                 <CardTitle className="text-xl font-semibold text-foreground">{member.name}</CardTitle>
                 <CardDescription className="text-primary">{member.role}</CardDescription>
@@ -90,11 +77,6 @@ export function TeamSection() {
                     {member.socials.github && (
                       <a href={member.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
                         <Github size={22} />
-                      </a>
-                    )}
-                    {member.socials.twitter && (
-                      <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
-                        <Twitter size={22} />
                       </a>
                     )}
                     {member.socials.facebook && (
