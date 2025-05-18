@@ -52,7 +52,7 @@ export function AboutSection() {
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNobm9sb2d5fGVufDB8fHx8MTc0NzU0NzUyNHww&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Equipe Mentes Brilhantes em colaboração"
               layout="fill"
               objectFit="cover"
